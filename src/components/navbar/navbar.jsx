@@ -2,11 +2,16 @@ import React from 'react'
 import Logo from '../../assets/shopping-basket-pngrepo-com.png'
 
 const navbar = () => {
-  return <div>
+  return (
+    <div className='shadow-md bg-white dark:bg-gray-900 dark:text-white'>
+    {/*In the code above, when we see the shadow-md, this words refers to the shadow applied to the box which contains all the navbar. The md words placed besides the word shadow refers to the intensity of the shadow, that is medium. Furthermore, the 'bg-white' refers to the background color of the entire navbar. And, when the page was set to a black or darker color, the navbar background will acquire this color and the text inside the navbar will have the white color. */}
     {/*Upper navbar*/}
-    <div>
+    {/*When we set bg-primary/40, we are setting the background color of all the navbar to the code specified, with the height of the 'background color' with 2 points.*/}
+    <div className='bg-primary/100 py-2'>
+        {/*This className below indicates that container who contains some content will be standardize in a flex model, with the contents following the justify-between rule and the items will be placed in the center of the container. In this case, all the navbar will follow this rule.*/}
         <div className='container flex justify-between items-center '>
             <div>
+                {/*In the line of code below of 'a href=#', we have a personalization of the text besides the logo, with a bold font, with a height of 2xl, according Tailwind, 3xl for small screens and a flex desing, with gap of 2 points from the logo.*/}
                 <a href="#"
                 className='font-bold text-2xl sm:text-3xl flex gap-2'>
                     <img src={Logo} alt="Logo" 
@@ -30,8 +35,8 @@ const navbar = () => {
     </div>
     {/*Lower Navbar*/}
     <div></div>
-    </div>;
-
-}
+    </div>
+  );
+};
 
 export default navbar
